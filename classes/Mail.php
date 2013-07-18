@@ -180,7 +180,7 @@ class MailCore
 			else if ($moduleName && file_exists($templatePath.$iso.'/lang.php'))
 				include_once(_PS_THEME_DIR_.'mails/'.$iso.'/lang.php');
 			else
-				include_once(dirname(__FILE__).'/../mails/'.$iso.'/lang.php');
+				include_once(_PS_ROOT_DIR_.'/mails/'.$iso.'/lang.php');
 
 			/* Create mail && attach differents parts */
 			$message = new Swift_Message('['.Configuration::get('PS_SHOP_NAME').'] '.$subject);
